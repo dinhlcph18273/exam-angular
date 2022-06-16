@@ -1,0 +1,32 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "name": "Product A",
+      "img": "https://picsum.photos/200/200",
+      "price": 2000,
+      "desc": "no desc"
+    },
+    {
+      "id": 2,
+      "name": "Product B",
+      "img": "https://picsum.photos/200/200",
+      "price": 2000,
+      "desc": "no desc"
+    },
+    {
+      "id": 3,
+      "name": "Product C",
+      "img": "https://picsum.photos/200/200",
+      "price": 2000,
+      "desc": "no desc"
+    },
+    {
+      "id": 4,
+      "name": "Product D",
+      "img": "https://picsum.photos/200/200",
+      "price": 2000,
+      "desc": "no desc"
+    }
+  ]
+}

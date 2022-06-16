@@ -1,0 +1,52 @@
+<h2>Add Product</h2>
+<form nz-form #submit="ngForm" (ngSubmit)="ngSubmit()">
+    <nz-form-item>
+        <nz-form-label [nzSpan]="9" nzFor="email">Name</nz-form-label>
+        <nz-form-control [nzSpan]="18">
+            <input nz-input name="name" type="text" id="" [(ngModel)]="product.name" #name="ngModel" required
+                minlength="5">
+            <div *ngIf="name.invalid && (name.dirty || name.touched)" class="aleft">
+                <span style="color: red;" *ngIf="name.errors?.['required']">
+                    Name is required
+                </span>
+                <span style="color: red;" *ngIf="name.errors?.['minlength']">
+                    Name is minlength 5
+                </span>
+            </div>
+        </nz-form-control>
+
+    </nz-form-item>
+    <nz-form-item>
+        <nz-form-label [nzSpan]="9" nzFor="email">Img</nz-form-label>
+        <nz-form-control [nzSpan]="18">
+            <input nz-input name="img" type="text" id="" [(ngModel)]="product.img" #img="ngModel" required>
+            <div *ngIf="img.invalid && (img.dirty || img.touched)" class="aleft">
+                <span style="color: red;" *ngIf="img.errors?.['required']">
+                    Img is required
+                </span>
+            </div>
+        </nz-form-control>
+
+    </nz-form-item>
+    <nz-form-item>
+        <nz-form-label [nzSpan]="9" nzFor="email">Price</nz-form-label>
+        <nz-form-control [nzSpan]="18">
+            <input nz-input name="price" type="number" id="" [(ngModel)]="product.price" #price="ngModel" required>
+            <div *ngIf="price.invalid && (price.dirty || price.touched)" class="aleft">
+                <span style="color: red;" *ngIf="price.errors?.['required']">
+                    Price is required
+                </span>
+            </div>
+        </nz-form-control>
+
+    </nz-form-item>
+    <nz-form-item>
+        <nz-form-label [nzSpan]="9" nzFor="email">Desc</nz-form-label>
+        <nz-form-control [nzSpan]="18">
+            <input nz-input name="desc" type="text" id="" [(ngModel)]="product.desc">
+        </nz-form-control>
+    </nz-form-item>
+    <nz-form-item>
+        <button type="submit" nz-button class="login-form-button login-form-margin" nzType="primary">Add</button>
+    </nz-form-item>
+</form>
